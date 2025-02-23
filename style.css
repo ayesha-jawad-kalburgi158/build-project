@@ -1,0 +1,141 @@
+ * {
+   margin: 0;
+   padding: 0;
+ }
+
+ body {
+   /* background-color: rgb(127, 238, 255); */
+   background-image: url("https://c4.wallpaperflare.com/wallpaper/966/690/502/forest-road-wallpaper-preview.jpg");
+   text-align: center;
+ }
+
+ h1 {
+  margin-top: 40px;
+ }
+
+ .container {
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+    overflow: hidden;
+ }
+
+ .game {
+   height: 60vmin;
+   width:   60vmin;
+   display: flex;
+   flex-wrap: wrap;
+   gap: 1.5vmin;
+ }
+
+ .box {
+   height: 18vmin;
+   width: 18vmin;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 1rem;
+   border: none;
+   box-shadow: 0 0 1rem rgba(0,0,0,0.5);
+   font-size :3vmin;
+   color: #b0413e;
+   background: linear-gradient(0deg, black,rgba(44,43,43));
+   /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;*/
+ 
+   border: 1px solid;
+   padding: 10px;
+   box-shadow: 5px 10px rgb(7, 56, 39);
+   font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    position: relative;
+    animation: melt 3s infinite ease-in-out;
+    background: linear-gradient(90deg, #ff6f61, #ffbd44, #ff6f61);
+    /* -webkit-background-clip: text; */
+    color: transparent;
+}
+
+.melting-text::before,
+.melting-text::after {
+    content: 'MELTING';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pxfuel.com%2Fen%2Fdesktop-wallpaper-iivjz&psig=AOvVaw1fPcVDbtd1KSqMEft5BmFv&ust=1739046169809000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMDb-f2xsosDFQAAAAAdAAAAABAR");
+    /* -webkit-background-clip: text; */
+    color: transparent;
+    z-index: -1;
+    transform: scaleY(1);
+    opacity: 0.1;
+    animation: drip 3s infinite ease-in-out;
+}
+
+.melting-text::after {
+  filter: blur(10px);
+  opacity: 0.3;
+}
+
+/* Keyframes for melting effect */
+@keyframes melt {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(20px);
+  }
+}
+
+@keyframes drip {
+  0%, 100% {
+      transform: scaleY(1);
+      opacity: 0.5;
+  }
+  50% {
+      transform: scaleY(1.5);
+      opacity: 0.7;
+  }
+}
+
+
+ #reset-btn {
+  padding: 1rem;
+  font-size: 1.25rem;
+  background-color: #191913;
+  color: #fff;
+  border-radius: 1rem;
+  border: none;
+  margin-bottom: 100px;
+ }
+
+ #new-btn {
+  padding: 1rem;
+  font-size: 1.25rem;
+  background-color: #191913;
+  color: #fff;
+  border-radius: 1rem;
+  border: none;
+  margin-bottom: 100px;
+ }
+
+ #msg {
+  color: #ffffc7;
+  font-size: 5vmin;
+ }
+
+ .msg-container {
+  height: 100vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5rem;
+ }
+
+.hide {
+  display: none;
+ } 
+
+
